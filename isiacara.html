@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags untuk pengaturan karakter dan viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isi Acara</title>
+    <!-- Link Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Style tambahan untuk mempercantik -->
+    <style>
+        /* Style custom untuk card acara */
+        .acara-card {
+            transition: box-shadow 0.3s;
+        }
+        .acara-card:hover {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-100 to-purple-200 min-h-screen font-sans">
+    <!-- Container utama isi acara -->
+    <div class="max-w-2xl mx-auto py-10 px-4">
+        <!-- Judul halaman -->
+        <h1 class="text-3xl font-bold text-center text-purple-700 mb-8">Susunan Acara Wisuda</h1>
+        <!-- Daftar susunan acara -->
+        <ul id="susunanAcara" class="space-y-6">
+            <!-- Pembukaan -->
+            <li class="acara-card bg-white rounded-lg shadow p-5 flex items-center">
+                <!-- Icon pembukaan -->
+                <span class="mr-4 text-blue-500">
+                    <!-- Komentar: Icon pembukaan -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m4 0h-1v4h-1m-4 0h-1v-4h-1"/>
+                    </svg>
+                </span>
+                <!-- Komentar: Teks pembukaan -->
+                <span class="text-lg font-semibold text-gray-700">Pembukaan</span>
+            </li>
+            <!-- Susunan Acara -->
+            <li class="acara-card bg-white rounded-lg shadow p-5 flex items-center">
+                <!-- Icon susunan acara -->
+                <span class="mr-4 text-green-500">
+                    <!-- Komentar: Icon susunan acara -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/>
+                    </svg>
+                </span>
+                <!-- Komentar: Teks susunan acara -->
+                <span class="text-lg font-semibold text-gray-700">Susunan Acara</span>
+            </li>
+            <!-- Lagu-lagu -->
+            <li class="acara-card bg-white rounded-lg shadow p-5 flex items-center">
+                <!-- Icon lagu-lagu -->
+                <span class="mr-4 text-pink-500">
+                    <!-- Komentar: Icon lagu-lagu -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-2v13"/>
+                    </svg>
+                </span>
+                <!-- Komentar: Teks lagu-lagu -->
+                <span class="text-lg font-semibold text-gray-700">Lagu-lagu</span>
+            </li>
+            <!-- Pemberian Toga -->
+            <li class="acara-card bg-white rounded-lg shadow p-5 flex items-center">
+                <!-- Icon pemberian toga -->
+                <span class="mr-4 text-yellow-500">
+                    <!-- Komentar: Icon pemberian toga -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0v6"/>
+                    </svg>
+                </span>
+                <!-- Komentar: Teks pemberian toga -->
+                <span class="text-lg font-semibold text-gray-700">Pemberian Toga</span>
+            </li>
+            <!-- Kesan Pesan -->
+            <li class="acara-card bg-white rounded-lg shadow p-5 flex items-center">
+                <!-- Icon kesan pesan -->
+                <span class="mr-4 text-indigo-500">
+                    <!-- Komentar: Icon kesan pesan -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8s-9-3.582-9-8a9 9 0 1118 0z"/>
+                    </svg>
+                </span>
+                <!-- Komentar: Teks kesan pesan -->
+                <span class="text-lg font-semibold text-gray-700">Kesan & Pesan</span>
+            </li>
+            <!-- Rama-Tambah -->
+            <li class="acara-card bg-white rounded-lg shadow p-5 flex items-center">
+                <!-- Icon rama-tambah -->
+                <span class="mr-4 text-red-500">
+                    <!-- Komentar: Icon rama-tambah -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                    </svg>
+                </span>
+                <!-- Komentar: Teks rama-tambah -->
+                <span class="text-lg font-semibold text-gray-700">Rama-Tambah</span>
+            </li>
+            <!-- Penutup -->
+            <li class="acara-card bg-white rounded-lg shadow p-5 flex items-center">
+                <!-- Icon penutup -->
+                <span class="mr-4 text-gray-500">
+                    <!-- Komentar: Icon penutup -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </span>
+                <!-- Komentar: Teks penutup -->
+                <span class="text-lg font-semibold text-gray-700">Penutup</span>
+            </li>
+        </ul>
+        <!-- Komentar: Tombol interaktif untuk menampilkan alert -->
+        <button id="infoBtn" class="mt-8 w-full py-3 bg-purple-600 text-white font-bold rounded-lg hover:bg-purple-700 transition">
+            Info Acara
+        </button>
+    </div>
+    <!-- Komentar: Script JavaScript untuk interaksi tombol -->
+    <script>
+        document.getElementById('infoBtn').onclick = function() {
+            alert('Susunan acara wisuda telah ditampilkan. Silakan cek setiap bagian untuk detailnya.');
+            
+        }
+    </script>
+</body>
+</html>

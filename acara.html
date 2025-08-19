@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACARA</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="max-w-xl mx-auto mt-10 bg-white rounded-xl shadow-lg p-8">
+        <h2 class="text-2xl font-bold text-center text-blue-900 mb-8">Garis Besar Isi Acara Wisuda</h2>
+        <ol class="list-decimal pl-5">
+            <li class="mb-4 text-lg cursor-pointer hover:bg-blue-50 rounded px-2 py-1" onclick="toggleDetail(0)">
+                Pembukaan
+                <div class="detail hidden mt-2 mb-2 p-3 bg-green-50 border-l-4 border-blue-500 rounded text-base">
+                    Sambutan pembukaan oleh MC dan doa awal acara.
+                </div>
+            </li>
+            <li class="mb-4 text-lg cursor-pointer hover:bg-blue-50 rounded px-2 py-1" onclick="toggleDetail(1)">
+                Ibadah
+                <div class="detail hidden mt-2 mb-2 p-3 bg-green-50 border-l-4 border-blue-500 rounded text-base">
+                    Pelaksanaan ibadah singkat sebagai bentuk rasa syukur.
+                </div>
+            </li>
+            <li class="mb-4 text-lg cursor-pointer hover:bg-blue-50 rounded px-2 py-1" onclick="toggleDetail(2)">
+                Prosesi Toga Wisuda
+                <div class="detail hidden mt-2 mb-2 p-3 bg-green-50 border-l-4 border-blue-500 rounded text-base">
+                    Pengalungan medali dan pemakaian toga kepada wisudawan/wisudawati.
+                </div>
+            </li>
+            <li class="mb-4 text-lg cursor-pointer hover:bg-blue-50 rounded px-2 py-1" onclick="toggleDetail(3)">
+                Sambutan
+                <div class="detail hidden mt-2 mb-2 p-3 bg-green-50 border-l-4 border-blue-500 rounded text-base">
+                    Sambutan dari perwakilan sekolah, orang tua, dan wisudawan.
+                </div>
+            </li>
+            <li class="mb-4 text-lg cursor-pointer hover:bg-blue-50 rounded px-2 py-1" onclick="toggleDetail(4)">
+                Penampilan Seni
+                <div class="detail hidden mt-2 mb-2 p-3 bg-green-50 border-l-4 border-blue-500 rounded text-base">
+                    Penampilan musik, tari, atau drama dari siswa/siswi.
+                </div>
+            </li>
+            <li class="mb-4 text-lg cursor-pointer hover:bg-blue-50 rounded px-2 py-1" onclick="toggleDetail(5)">
+                Penyerahan Sertifikat
+                <div class="detail hidden mt-2 mb-2 p-3 bg-green-50 border-l-4 border-blue-500 rounded text-base">
+                    Penyerahan sertifikat kelulusan kepada wisudawan/wisudawati.
+                </div>
+            </li>
+            <li class="mb-4 text-lg cursor-pointer hover:bg-blue-50 rounded px-2 py-1" onclick="toggleDetail(6)">
+                Ramah Tamah
+                <div class="detail hidden mt-2 mb-2 p-3 bg-green-50 border-l-4 border-blue-500 rounded text-base">
+                    Sesi ramah tamah dan silaturahmi antara tamu undangan dan wisudawan.
+                </div>
+            </li>
+            <li class="mb-4 text-lg cursor-pointer hover:bg-blue-50 rounded px-2 py-1" onclick="toggleDetail(7)">
+                Penutup
+                <div class="detail hidden mt-2 mb-2 p-3 bg-green-50 border-l-4 border-blue-500 rounded text-base">
+                    Doa penutup dan ucapan terima kasih kepada semua pihak.
+                </div>
+            </li>
+        </ol>
+    </div>
+    <script>
+        function toggleDetail(idx) {
+            const details = document.querySelectorAll('.detail');
+            details[idx].classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

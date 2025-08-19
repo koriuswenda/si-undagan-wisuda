@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-blue-600 text-white py-6 text-center">
+        <h1 class="text-3xl font-bold">Website Undangan Wisuda</h1>
+        <div class="mt-2 flex justify-center gap-6 text-sm">
+            <span>
+                Telp: <span id="phone" class="font-semibold">0812-3456-7890</span>
+                <button class="ml-2 px-2 py-1 bg-white text-blue-600 rounded hover:bg-blue-100 transition" onclick="copyContact('phone')">Copy</button>
+            </span>
+            <span>
+                Email: <span id="email" class="font-semibold">info@undanganwisuda.com</span>
+                <button class="ml-2 px-2 py-1 bg-white text-blue-600 rounded hover:bg-blue-100 transition" onclick="copyContact('email')">Copy</button>
+            </span>
+        </div>
+    </header>
+    <nav class="bg-white shadow text-center py-3">
+        <a href="index.html" class="text-blue-600 font-bold mx-4 hover:underline">Beranda</a>
+        <a href="tentangkami.html" class="text-blue-600 font-bold mx-4 hover:underline">Tentang Kami</a>
+        <a href="kontak.html" class="text-blue-600 font-bold mx-4 hover:underline">Kontak</a>
+    </nav>
+    <div class="max-w-3xl mx-auto bg-white mt-8 p-8 rounded-xl shadow">
+        <h2 class="text-2xl font-bold text-blue-600 mb-4">Tentang Kami</h2>
+        <p class="mb-6 text-gray-700">
+            Website Undangan Wisuda adalah platform digital yang menyediakan layanan pembuatan undangan wisuda secara online. Kami berkomitmen untuk memberikan kemudahan dan kenyamanan bagi para wisudawan dalam membagikan momen spesial mereka kepada keluarga dan teman.
+        </p>
+        <div class="flex flex-col md:flex-row gap-6 mb-6">
+            <div class="flex-1 bg-blue-50 p-4 rounded-lg text-center">
+                <img src="img/senat.jpg" alt="Tim 1" class="w-20 h-20 rounded-full mx-auto mb-3 shadow">
+                <h3 class="font-semibold text-blue-700">Foto Bersama Pimpinan Senat STT Baptis Papua</h3>
+                <p class="text-gray-600">Foto Bersama Senat</p>
+            </div>
+            <div class="flex-1 bg-blue-50 p-4 rounded-lg text-center">
+                <img src="img/yudisiun.jpg" alt="Tim 2" class="w-20 h-20 rounded-full mx-auto mb-3 shadow">
+                <h3 class="font-semibold text-blue-700">Foto Pembacaan SK- Yudisium Bersama Senat</h3>
+                <p class="text-gray-600">Foto Yudisium Bersama Senat</p>
+            </div>
+            <div class="flex-1 bg-blue-50 p-4 rounded-lg text-center">
+                <img src="img/toga.jpg" alt="Tim 3" class="w-20 h-20 rounded-full mx-auto mb-3 shadow">
+                <h3 class="font-semibold text-blue-700">Senat Terbuka Civitas Academisi Sekolah Tinggi Teologi Baptis Papua</h3>
+                <p class="text-gray-600">Pemberian Toga Pimpinan Senat</p>
+            </div>
+        </div>
+        <button class="block mx-auto mt-4 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition" onclick="toggleMore()">Tampilkan Lebih Banyak</button>
+        <div id="more-info" class="hidden mt-6">
+            <h3 class="text-lg font-bold text-blue-600 mb-2">Visi & Misi</h3>
+            <ul class="list-disc pl-6 text-gray-700">
+                <li>Menjadi platform undangan wisuda digital terbaik di Indonesia.</li>
+                <li>Menyediakan layanan yang mudah, cepat, dan aman.</li>
+                <li>Mendukung kreativitas wisudawan dalam membuat undangan yang unik.</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function toggleMore() {
+            const moreInfo = document.getElementById('more-info');
+            const btn = document.querySelector('button[onclick="toggleMore()"]');
+            if (moreInfo.classList.contains('hidden')) {
+                moreInfo.classList.remove('hidden');
+                btn.textContent = 'Sembunyikan';
+            } else {
+                moreInfo.classList.add('hidden');
+                btn.textContent = 'Tampilkan Lebih Banyak';
+            }
+        }
+        function copyContact(id) {
+            const text = document.getElementById(id).textContent;
+            navigator.clipboard.writeText(text);
+        }
+    </script>
+</body>
+</html>
